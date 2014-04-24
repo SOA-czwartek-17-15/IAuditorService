@@ -11,6 +11,9 @@ namespace IAuditorService
     [ServiceContract]
     interface IAuditorService
     {
-
+        [OperationContract]
+        int GetNumberOfTransfers(DateTime date);
+        [OperationContract]
+        int GetTransferedMoney(DateTime date);
     }
 }
