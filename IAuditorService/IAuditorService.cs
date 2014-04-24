@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 namespace IAuditorService
 {
     /*
-     * jakas operacja do odczytu/zapisu do db
+     * jakas operacja do odczytu/zapisu do DB
      * ORM: Hibernate lub Entity Framework
      */
     [ServiceContract]
