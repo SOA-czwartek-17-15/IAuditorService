@@ -11,6 +11,7 @@ namespace IAuditorService
     /*
      * jakas operacja do odczytu/zapisu do DB
      * ORM: Hibernate lub Entity Framework
+     * logowanie: log4net
      */
     [ServiceContract]
     interface IAuditorService
