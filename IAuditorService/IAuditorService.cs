@@ -8,6 +8,9 @@ using System.Runtime.Serialization;
 
 namespace IAuditorService
 {
+    /*
+        jakas operacja do odczytu/zapisu do db
+     */
     [ServiceContract]
     interface IAuditorService
     {
@@ -15,5 +18,11 @@ namespace IAuditorService
         int GetNumberOfTransfers(DateTime date);
         [OperationContract]
         int GetTransferedMoney(DateTime date);
+        [OperationContract]
+        int GetCreditNumber();
+        [OperationContract]
+        bool AuditAll();
+        [OperationContract]
+        bool GetHistory(); //TODO: jakis format historii, zeby zwracac info
     }
 }
