@@ -1,0 +1,1 @@
+D:\Projekty\dotNET\IAuditorService\IAuditorService\bin\Debug\IAuditorService.exe.config
