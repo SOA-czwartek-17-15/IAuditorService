@@ -1,0 +1,2 @@
+D:\Projekty\dotNET\IAuditorService\IAuditorService\bin\Debug\IAuditorService.exe.config
+D:\Projekty\dotNET\Bank\IAuditorService\IAuditorService\bin\Debug\IAuditorService.exe.config
