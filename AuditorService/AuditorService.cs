@@ -4,20 +4,28 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 using System.ServiceModel.Description;
+using System.Configuration;
+using System.Timers;
 using Contracts;
 using log4net;
-using System.Timers;
+using NHibernate;
+
 
 namespace AuditorService
 {
     class Program
     {
+        //for true: the AuditorService won't connect to the ServiceRepository
+        private static bool _test = true;
+
+        private static IServiceRepository ServiceRepo { get; set; }
+
         static void Main(string[] args)
         {
             //logger config
             log4net.Config.XmlConfigurator.Configure();
 
-            log("Initializing...");
+            Log("Initialising...");
 
             //Configuration
             AuditorService auditor = new AuditorService();
@@ -34,58 +42,115 @@ namespace AuditorService
 
             sh.Open();
 
-            log("Service has started");
+            Log("Service has started");
 
-            //registering
+            if (!_test) 
+            { 
+                //registering
+                NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
 
-            log("Service has been registered");
+                ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(ConfigurationSettings.AppSettings["ServiceRepositoryAddress"]));
+                ServiceRepo = cf.CreateChannel();
 
-            Timer t = new Timer(1000 * 60 * 10); // 1000 milisecond * 60 = 1 minute
+                try
+                {
+                    ServiceRepo.RegisterService("AuditorService", "net.tcp://localhost:54390/IAuditorService");
+                }
+                catch (EndpointNotFoundException e)
+                {
+                    LogException(e.Message);
+                    Console.WriteLine("Press any key to exit...");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+
+                Log("Service has been registered");
+            }
+
+            //setting up the timer
+            SendAliveSignal();
+
+            Timer t = new Timer(1000 * 60); // 1000 milisecond * 60 = 1 minute
             t.AutoReset = true;
             t.Elapsed += new System.Timers.ElapsedEventHandler(Alive);
             t.Start();
 
+            Log("Service has set the timer up");
+
+            Log("Service is ready");
+
+            //at this point the service is ready
+            //keypress closes the service
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
 
-            log("Exiting...");
+            if (!_test) 
+            { 
+                try
+                {
+                    ServiceRepo.Unregister("AuditorService");
+                }
+                catch (EndpointNotFoundException e)
+                {
+                    LogException(e.Message);
+                    Console.WriteLine("Press any key to exit...");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
 
-            //string serviceRepository = "net.tcp://localhost:54321/ServiceRepo";//to powinno byc odczytane z app.config
-            //strworzenie clienta do service repo
-            //zarejestrowanie swojej uslugi
-            //odpalenie timera w celu wysylania Alive
-            //stworznie AccountRepository i przekazanie mu serviceRepository zeby odpytac o potrzebne sewisy
+                Log("Service has been unregistered");
+            }
 
-            // logowanie
+            Log("Exiting...");
         }
 
         private static void Alive(object sender, System.Timers.ElapsedEventArgs e)
         {
-            //TODO send isAlive info
-            log("'Alive' signal sent");
+            SendAliveSignal();
         }
 
-        private static void log(String log)
+        private static void SendAliveSignal()
+        {
+            if (!_test) 
+            { 
+                try
+                {
+                    ServiceRepo.Alive("AuditorService");
+                }
+                catch (EndpointNotFoundException e)
+                {
+                    LogException(e.Message);
+                    Console.WriteLine("Press any key to exit...");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+            }
+            
+            Log("'Alive' signal sent");
+        }
+
+        private static void Log(String log)
         {
             Console.WriteLine(log);
             Logger.log.Info(log);
         }
+
+        private static void LogException(String log)
+        {
+            Console.WriteLine(log);
+            Logger.log.Error(log);
+        }
     }
-    
-    /*
-     * jakas operacja do odczytu/zapisu do DB
-     * ORM: Hibernate lub Entity Framework
-     * logowanie: log4net
-     */
+
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, IncludeExceptionDetailInFaults = true)]
-    class AuditorService : IAuditorService
+    public class AuditorService : IAuditorService
     {
         public int GetNumberOfTransfersByDate(DateTime date)
         {
             return 0;
         }
 
-        public int GetNumberOfTransfersByAccount(Guid accountId)
+        public int GetNumberOfTransfersByAccount(String accountNumber)
         {
             return 0;
         }
@@ -95,7 +160,7 @@ namespace AuditorService
             return 0;
         }
 
-        public int GetTransferedMoneyByAccount(Guid accountId)
+        public int GetTransferedMoneyByAccount(String accountNumber)
         {
             return 0;
         }
@@ -115,14 +180,47 @@ namespace AuditorService
             return null;
         }
 
-        public IEnumerable<Audit> GetAuditsByAccount(Guid accountId)
+        public IEnumerable<Audit> GetAuditsByAccount(String accountNumber)
         {
             return null;
         }
 
-        public bool AddAudit(Guid accountId, long Money)
+        public bool AddAudit(String accountNumber, long Money)
         {
-            return false;
+            try
+            {
+                using (ISession session = NHibernateHelper.OpenSession())
+                {
+                    using (ITransaction transaction = session.BeginTransaction())
+                    {
+                        Audit audit = new Audit();
+                        audit.AccountNumber = accountNumber;
+                        audit.Money = Money;
+                        audit.Date = DateTime.Now;
+
+                        session.Save(audit);
+                        transaction.Commit();
+
+                        Log("Created new Audit for Account number: " + accountNumber);
+                        return true;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogError(e.Message);
+                return false;
+            }
+        }
+
+        private void Log(String log)
+        {
+            Logger.log.Info(log);
+        }
+
+        private void LogError(String log)
+        {
+            Logger.log.Error(log);
         }
     }
 

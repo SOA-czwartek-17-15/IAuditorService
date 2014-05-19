@@ -1,6 +1,5 @@
 D:\Projekty\dotNET\Bank\IAuditorService\IAuditorService\bin\Debug\IAuditorService.exe.config
 D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\IAuditorService.exe.config
-D:\Projekty\dotNET\Bank\AuditorService\AuditorService\obj\Debug\AuditorService.csprojResolveAssemblyReference.cache
 D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\IAuditorService.exe
 D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\IAuditorService.pdb
 D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\Contracts.dll
@@ -8,3 +7,13 @@ D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\log4net.dll
 D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\log4net.xml
 D:\Projekty\dotNET\Bank\AuditorService\AuditorService\obj\Debug\IAuditorService.exe
 D:\Projekty\dotNET\Bank\AuditorService\AuditorService\obj\Debug\IAuditorService.pdb
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\Iesi.Collections.dll
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\NHibernate.dll
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\Iesi.Collections.pdb
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\Iesi.Collections.xml
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\NHibernate.pdb
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\NHibernate.xml
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\hibernate.cfg.xml
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\obj\Debug\AuditorService.csprojResolveAssemblyReference.cache
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\MySql.Data.dll
+D:\Projekty\dotNET\Bank\AuditorService\AuditorService\bin\Debug\Contracts.pdb
