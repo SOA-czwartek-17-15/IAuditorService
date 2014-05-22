@@ -1,420 +1,748 @@
-2014-05-19 18:10:48,655 [9] INFO  AuditorService.Logger : Initialising...
-2014-05-19 18:10:49,243 [9] INFO  AuditorService.Logger : Service has started
-2014-05-19 18:10:49,243 [9] INFO  AuditorService.Logger : 'Alive' signal sent
-2014-05-19 18:10:49,244 [9] INFO  AuditorService.Logger : Service has setup the timer
-2014-05-19 18:10:49,244 [9] INFO  AuditorService.Logger : Service is ready
-2014-05-19 18:10:49,244 [9] INFO  AuditorService.Logger : Test start
-2014-05-19 18:10:49,771 [9] INFO  NHibernate.Cfg.Environment : NHibernate 3.3.1.4000 (3.3.3.GA)
-2014-05-19 18:10:49,783 [9] INFO  NHibernate.Cfg.Environment : hibernate-configuration section not found in application configuration file
-2014-05-19 18:10:49,783 [9] INFO  NHibernate.Cfg.Environment : Bytecode provider name : lcg
-2014-05-19 18:10:49,784 [9] INFO  NHibernate.Cfg.Environment : Using reflection optimizer
-2014-05-19 18:10:49,816 [9] DEBUG NHibernate.Cfg.Configuration : connection.provider=NHibernate.Connection.DriverConnectionProvider
-2014-05-19 18:10:49,816 [9] DEBUG NHibernate.Cfg.Configuration : dialect=NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:10:49,816 [9] DEBUG NHibernate.Cfg.Configuration : connection.driver_class=NHibernate.Driver.MySqlDataDriver
-2014-05-19 18:10:49,816 [9] DEBUG NHibernate.Cfg.Configuration : connection.connection_string=Server=sql3.freemysqlhosting.net;Database=sql340632;User ID=sql340632;Password=eF5!jX5!;
-2014-05-19 18:10:49,816 [9] DEBUG NHibernate.Cfg.Configuration : use_proxy_validator=false
-2014-05-19 18:10:49,816 [9] DEBUG NHibernate.Cfg.Configuration : hbm2ddl.auto=create
-2014-05-19 18:10:49,817 [9] DEBUG NHibernate.Cfg.Configuration : properties: System.Collections.Generic.Dictionary`2[System.String,System.String]
-2014-05-19 18:10:49,817 [9] INFO  NHibernate.Cfg.Configuration : Mapping resource: Contracts.Mappings.Audit.hbm.xml
-2014-05-19 18:10:49,873 [9] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:10:49,918 [9] INFO  NHibernate.Cfg.XmlHbmBinding.Binder : Mapping class: Contracts.Audit -> Audit
-2014-05-19 18:10:49,943 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Id -> Id, type: Guid
-2014-05-19 18:10:49,956 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: AccountNumber -> AccountNumber, type: String
-2014-05-19 18:10:49,956 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Money -> Money, type: Int64
-2014-05-19 18:10:49,956 [9] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Date -> Date, type: DateTime
-2014-05-19 18:10:49,962 [9] INFO  NHibernate.Cfg.Configuration : checking mappings queue
-2014-05-19 18:10:49,962 [9] INFO  NHibernate.Cfg.Configuration : processing one-to-many association mappings
-2014-05-19 18:10:49,962 [9] INFO  NHibernate.Cfg.Configuration : processing one-to-one association property references
-2014-05-19 18:10:49,962 [9] INFO  NHibernate.Cfg.Configuration : processing foreign key constraints
-2014-05-19 18:10:49,964 [9] INFO  NHibernate.Cfg.Configuration : processing filters (second pass)
-2014-05-19 18:10:50,017 [9] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:10:50,020 [9] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:10:50,055 [9] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory : Using dialect defined converter
-2014-05-19 18:10:50,056 [9] INFO  NHibernate.Cfg.SettingsFactory : Generate SQL with comments: disabled
-2014-05-19 18:10:50,057 [9] INFO  NHibernate.Connection.ConnectionProviderFactory : Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-2014-05-19 18:10:50,057 [9] INFO  NHibernate.Connection.ConnectionProvider : Configuring ConnectionProvider
-2014-05-19 18:10:50,067 [9] INFO  NHibernate.Cfg.SettingsFactory : Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
-2014-05-19 18:10:50,067 [9] INFO  NHibernate.Cfg.SettingsFactory : Optimize cache for minimal puts: False
-2014-05-19 18:10:50,067 [9] INFO  NHibernate.Cfg.SettingsFactory : Connection release mode: auto
-2014-05-19 18:10:50,067 [9] INFO  NHibernate.Cfg.SettingsFactory : Default batch fetch size: 1
-2014-05-19 18:10:50,068 [9] INFO  NHibernate.Cfg.SettingsFactory : Statistics: disabled
-2014-05-19 18:10:50,068 [9] INFO  NHibernate.Cfg.SettingsFactory : Deleted entity synthetic identifier rollback: disabled
-2014-05-19 18:10:50,068 [9] INFO  NHibernate.Cfg.SettingsFactory : Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-2014-05-19 18:10:50,069 [9] INFO  NHibernate.Cfg.SettingsFactory : Query language substitutions: {}
-2014-05-19 18:10:50,070 [9] INFO  NHibernate.Cfg.SettingsFactory : cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2014-05-19 18:10:50,070 [9] INFO  NHibernate.Cfg.SettingsFactory : Order SQL inserts for batching: disabled
-2014-05-19 18:10:50,070 [9] DEBUG NHibernate.Cfg.SettingsFactory : Wrap result sets: disabled
-2014-05-19 18:10:50,070 [9] INFO  NHibernate.Cfg.SettingsFactory : Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2014-05-19 18:10:50,071 [9] INFO  NHibernate.Cfg.SettingsFactory : Default entity-mode: Poco
-2014-05-19 18:10:50,071 [9] INFO  NHibernate.Cfg.SettingsFactory : Named query checking : enabled
-2014-05-19 18:10:50,084 [9] INFO  NHibernate.Impl.SessionFactoryImpl : building session factory
-2014-05-19 18:10:50,084 [9] DEBUG NHibernate.Impl.SessionFactoryImpl : Session factory constructed with filter configurations : {}
-2014-05-19 18:10:50,084 [9] DEBUG NHibernate.Impl.SessionFactoryImpl : instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'dialect'='NHibernate.Dialect.MySQL5Dialect', 'connection.driver_class'='NHibernate.Driver.MySqlDataDriver', 'connection.connection_string'='Server=sql3.freemysqlhosting.net;Database=sql340632;User ID=sql340632;Password=eF5!jX5!;', 'use_proxy_validator'='false', 'hbm2ddl.auto'='create'}
-2014-05-19 18:10:50,086 [9] DEBUG NHibernate.Connection.DriverConnectionProvider : Obtaining IDbConnection from Driver
-2014-05-19 18:10:52,082 [9] DEBUG NHibernate.Connection.ConnectionProvider : Closing connection
-2014-05-19 18:10:52,196 [9] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer : No custom accessors found for entity: Contracts.Audit
-2014-05-19 18:10:52,199 [9] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer : No custom accessors found for entity: Contracts.Audit
-2014-05-19 18:10:52,254 [9] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer : Create Instantiator using optimizer for:Contracts.Audit
-2014-05-19 18:10:52,322 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Static SQL for entity: Contracts.Audit
-2014-05-19 18:10:52,322 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Version select: SELECT Id FROM Audit WHERE Id = ?
-2014-05-19 18:10:52,322 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Snapshot select: SELECT audit_.Id, audit_.AccountNumber as AccountN2_0_, audit_.Money as Money0_, audit_.Date as Date0_ FROM Audit audit_ WHERE audit_.Id=?
-2014-05-19 18:10:52,322 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Insert 0: INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?, ?, ?, ?)
-2014-05-19 18:10:52,322 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Update 0: UPDATE Audit SET AccountNumber = ?, Money = ?, Date = ? WHERE Id = ?
-2014-05-19 18:10:52,322 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Delete 0: DELETE FROM Audit WHERE Id = ?
-2014-05-19 18:10:52,356 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:10:52,356 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:10:52,356 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:10:52,356 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:10:52,356 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:10:52,357 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:10:52,357 [9] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:10:52,358 [9] DEBUG NHibernate.Impl.SessionFactoryObjectFactory : initializing class SessionFactoryObjectFactory
-2014-05-19 18:10:52,358 [9] DEBUG NHibernate.Impl.SessionFactoryObjectFactory : registered: dc20cd9278ee4a199a2de8904e6cf5a1(unnamed)
-2014-05-19 18:10:52,358 [9] INFO  NHibernate.Impl.SessionFactoryObjectFactory : no name configured
-2014-05-19 18:10:52,358 [9] DEBUG NHibernate.Impl.SessionFactoryImpl : Instantiated session factory
-2014-05-19 18:10:52,361 [9] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:10:52,362 [9] INFO  NHibernate.Cfg.Configuration : checking mappings queue
-2014-05-19 18:10:52,362 [9] INFO  NHibernate.Cfg.Configuration : processing one-to-many association mappings
-2014-05-19 18:10:52,362 [9] INFO  NHibernate.Cfg.Configuration : processing one-to-one association property references
-2014-05-19 18:10:52,362 [9] INFO  NHibernate.Cfg.Configuration : processing foreign key constraints
-2014-05-19 18:10:52,363 [9] INFO  NHibernate.Cfg.Configuration : processing filters (second pass)
-2014-05-19 18:10:52,366 [9] INFO  NHibernate.Cfg.Configuration : checking mappings queue
-2014-05-19 18:10:52,366 [9] INFO  NHibernate.Cfg.Configuration : processing one-to-many association mappings
-2014-05-19 18:10:52,366 [9] INFO  NHibernate.Cfg.Configuration : processing one-to-one association property references
-2014-05-19 18:10:52,366 [9] INFO  NHibernate.Cfg.Configuration : processing foreign key constraints
-2014-05-19 18:10:52,366 [9] INFO  NHibernate.Cfg.Configuration : processing filters (second pass)
-2014-05-19 18:10:52,369 [9] INFO  NHibernate.Connection.ConnectionProviderFactory : Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-2014-05-19 18:10:52,370 [9] INFO  NHibernate.Connection.ConnectionProvider : Configuring ConnectionProvider
-2014-05-19 18:10:52,370 [9] DEBUG NHibernate.Connection.DriverConnectionProvider : Obtaining IDbConnection from Driver
-2014-05-19 18:10:53,076 [9] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport : 
-    drop table if exists Audit
-2014-05-19 18:10:53,446 [9] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport : 
-    create table Audit (
-        Id BINARY(16) not null,
-       AccountNumber VARCHAR(255),
-       Money BIGINT,
-       Date DATETIME,
-       primary key (Id)
-    )
-2014-05-19 18:10:53,732 [9] DEBUG NHibernate.Connection.ConnectionProvider : Closing connection
-2014-05-19 18:10:53,733 [9] DEBUG NHibernate.Connection.ConnectionProvider : Disposing of ConnectionProvider.
-2014-05-19 18:10:53,735 [9] DEBUG NHibernate.Impl.SessionFactoryImpl : Checking 0 named HQL queries
-2014-05-19 18:10:53,735 [9] DEBUG NHibernate.Impl.SessionFactoryImpl : Checking 0 named SQL queries
-2014-05-19 18:10:53,748 [9] DEBUG NHibernate.Impl.SessionImpl : [session-id=d89e82ca-2b31-498e-af64-aa93fac19788] opened session at timestamp: 635361198537, for session factory: [/dc20cd9278ee4a199a2de8904e6cf5a1]
-2014-05-19 18:10:53,751 [9] DEBUG NHibernate.Transaction.AdoTransaction : Begin (Unspecified)
-2014-05-19 18:10:53,752 [9] DEBUG NHibernate.Connection.DriverConnectionProvider : Obtaining IDbConnection from Driver
-2014-05-19 18:10:54,752 [9] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener : saving transient instance
-2014-05-19 18:10:54,753 [9] DEBUG NHibernate.Event.Default.AbstractSaveEventListener : generated identifier: 7b529899-117d-4ff8-8d48-d7c70fd50992, using strategy: NHibernate.Id.GuidGenerator
-2014-05-19 18:10:54,754 [9] DEBUG NHibernate.Event.Default.AbstractSaveEventListener : saving [Contracts.Audit#7b529899-117d-4ff8-8d48-d7c70fd50992]
-2014-05-19 18:10:54,781 [9] DEBUG NHibernate.Transaction.AdoTransaction : Start Commit
-2014-05-19 18:10:54,783 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : flushing session
-2014-05-19 18:10:54,783 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : processing flush-time cascades
-2014-05-19 18:10:54,799 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : dirty checking collections
-2014-05-19 18:10:54,800 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushing entities and processing referenced collections
-2014-05-19 18:10:54,807 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Processing unreferenced collections
-2014-05-19 18:10:54,807 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Scheduling collection removes/(re)creates/updates
-2014-05-19 18:10:54,808 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2014-05-19 18:10:54,808 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2014-05-19 18:10:54,808 [9] DEBUG NHibernate.Impl.Printer : listing entities:
-2014-05-19 18:10:54,810 [9] DEBUG NHibernate.Impl.Printer : Contracts.Audit{'Id'='7b529899-117d-4ff8-8d48-d7c70fd50992', 'AccountNumber'='12345', 'Money'='666', 'Date'='2014-05-19 18:10:54'}
-2014-05-19 18:10:54,810 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : executing flush
-2014-05-19 18:10:54,810 [9] DEBUG NHibernate.AdoNet.ConnectionManager : registering flush begin
-2014-05-19 18:10:54,827 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Inserting entity: [Contracts.Audit#7b529899-117d-4ff8-8d48-d7c70fd50992]
-2014-05-19 18:10:54,835 [9] DEBUG NHibernate.AdoNet.AbstractBatcher : Opened new IDbCommand, open IDbCommands: 1
-2014-05-19 18:10:54,835 [9] DEBUG NHibernate.AdoNet.AbstractBatcher : Building an IDbCommand object for the SqlString: INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?, ?, ?, ?)
-2014-05-19 18:10:54,835 [9] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Dehydrating entity: [Contracts.Audit#7b529899-117d-4ff8-8d48-d7c70fd50992]
-2014-05-19 18:10:54,836 [9] DEBUG NHibernate.Type.StringType : binding '12345' to parameter: 0
-2014-05-19 18:10:54,837 [9] DEBUG NHibernate.Type.Int64Type : binding '666' to parameter: 1
-2014-05-19 18:10:54,837 [9] DEBUG NHibernate.Type.DateTimeType : binding '2014-05-19 18:10:54' to parameter: 2
-2014-05-19 18:10:54,837 [9] DEBUG NHibernate.Type.GuidType : binding '7b529899-117d-4ff8-8d48-d7c70fd50992' to parameter: 3
-2014-05-19 18:10:54,857 [9] DEBUG NHibernate.SQL : INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?p0, ?p1, ?p2, ?p3);?p0 = '12345' [Type: String (5)], ?p1 = 666 [Type: Int64 (0)], ?p2 = 2014-05-19 18:10:54 [Type: DateTime (0)], ?p3 = 7b529899-117d-4ff8-8d48-d7c70fd50992 [Type: Guid (0)]
-2014-05-19 18:10:54,858 [9] DEBUG NHibernate.Transaction.AdoTransaction : Enlist Command
-2014-05-19 18:10:55,395 [9] DEBUG NHibernate.AdoNet.AbstractBatcher : ExecuteNonQuery took 536 ms
-2014-05-19 18:10:55,397 [9] DEBUG NHibernate.AdoNet.AbstractBatcher : ExecuteBatch for 1 statements took 0 ms
-2014-05-19 18:10:55,398 [9] DEBUG NHibernate.AdoNet.AbstractBatcher : Closed IDbCommand, open IDbCommands: 0
-2014-05-19 18:10:55,399 [9] DEBUG NHibernate.AdoNet.ConnectionManager : registering flush end
-2014-05-19 18:10:55,399 [9] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : post flush
-2014-05-19 18:10:55,400 [9] DEBUG NHibernate.Impl.SessionImpl : before transaction completion
-2014-05-19 18:10:55,700 [9] DEBUG NHibernate.Transaction.AdoTransaction : IDbTransaction Committed
-2014-05-19 18:10:55,700 [9] DEBUG NHibernate.Impl.SessionImpl : transaction completion
-2014-05-19 18:10:55,701 [9] DEBUG NHibernate.AdoNet.ConnectionManager : aggressively releasing database connection
-2014-05-19 18:10:55,701 [9] DEBUG NHibernate.Connection.ConnectionProvider : Closing connection
-2014-05-19 18:10:55,703 [9] DEBUG NHibernate.Transaction.AdoTransaction : IDbTransaction disposed.
-2014-05-19 18:10:55,703 [9] INFO  AuditorService.Logger : Created new Audit for Account number: 12345
-2014-05-19 18:10:55,703 [9] DEBUG NHibernate.Impl.SessionImpl : [session-id=d89e82ca-2b31-498e-af64-aa93fac19788] running ISession.Dispose()
-2014-05-19 18:10:55,703 [9] DEBUG NHibernate.Impl.SessionImpl : [session-id=d89e82ca-2b31-498e-af64-aa93fac19788] executing real Dispose(True)
-2014-05-19 18:10:55,704 [9] DEBUG NHibernate.Impl.SessionImpl : closing session
-2014-05-19 18:10:55,704 [9] DEBUG NHibernate.AdoNet.AbstractBatcher : running BatcherImpl.Dispose(true)
-2014-05-19 18:10:55,707 [9] INFO  AuditorService.Logger : Test end
-2014-05-19 18:10:56,228 [9] INFO  AuditorService.Logger : Exiting...
-2014-05-19 18:12:28,100 [8] INFO  AuditorService.Logger : Initialising...
-2014-05-19 18:12:28,679 [8] INFO  AuditorService.Logger : Service has started
-2014-05-19 18:12:28,679 [8] INFO  AuditorService.Logger : 'Alive' signal sent
-2014-05-19 18:12:28,686 [8] INFO  AuditorService.Logger : Service has setup the timer
-2014-05-19 18:12:28,686 [8] INFO  AuditorService.Logger : Service is ready
-2014-05-19 18:12:28,686 [8] INFO  AuditorService.Logger : Test start
-2014-05-19 18:12:29,215 [8] INFO  NHibernate.Cfg.Environment : NHibernate 3.3.1.4000 (3.3.3.GA)
-2014-05-19 18:12:29,227 [8] INFO  NHibernate.Cfg.Environment : hibernate-configuration section not found in application configuration file
-2014-05-19 18:12:29,227 [8] INFO  NHibernate.Cfg.Environment : Bytecode provider name : lcg
-2014-05-19 18:12:29,228 [8] INFO  NHibernate.Cfg.Environment : Using reflection optimizer
-2014-05-19 18:12:29,259 [8] DEBUG NHibernate.Cfg.Configuration : connection.provider=NHibernate.Connection.DriverConnectionProvider
-2014-05-19 18:12:29,259 [8] DEBUG NHibernate.Cfg.Configuration : dialect=NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:12:29,259 [8] DEBUG NHibernate.Cfg.Configuration : connection.driver_class=NHibernate.Driver.MySqlDataDriver
-2014-05-19 18:12:29,259 [8] DEBUG NHibernate.Cfg.Configuration : connection.connection_string=Server=sql3.freemysqlhosting.net;Database=sql340632;User ID=sql340632;Password=eF5!jX5!;
-2014-05-19 18:12:29,259 [8] DEBUG NHibernate.Cfg.Configuration : use_proxy_validator=false
-2014-05-19 18:12:29,259 [8] DEBUG NHibernate.Cfg.Configuration : hbm2ddl.auto=create
-2014-05-19 18:12:29,260 [8] DEBUG NHibernate.Cfg.Configuration : properties: System.Collections.Generic.Dictionary`2[System.String,System.String]
-2014-05-19 18:12:29,260 [8] INFO  NHibernate.Cfg.Configuration : Mapping resource: Contracts.Mappings.Audit.hbm.xml
-2014-05-19 18:12:29,314 [8] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:12:29,359 [8] INFO  NHibernate.Cfg.XmlHbmBinding.Binder : Mapping class: Contracts.Audit -> Audit
-2014-05-19 18:12:29,384 [8] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Id -> Id, type: Guid
-2014-05-19 18:12:29,397 [8] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: AccountNumber -> AccountNumber, type: String
-2014-05-19 18:12:29,397 [8] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Money -> Money, type: Int64
-2014-05-19 18:12:29,397 [8] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Date -> Date, type: DateTime
-2014-05-19 18:12:29,403 [8] INFO  NHibernate.Cfg.Configuration : checking mappings queue
-2014-05-19 18:12:29,403 [8] INFO  NHibernate.Cfg.Configuration : processing one-to-many association mappings
-2014-05-19 18:12:29,403 [8] INFO  NHibernate.Cfg.Configuration : processing one-to-one association property references
-2014-05-19 18:12:29,403 [8] INFO  NHibernate.Cfg.Configuration : processing foreign key constraints
-2014-05-19 18:12:29,404 [8] INFO  NHibernate.Cfg.Configuration : processing filters (second pass)
-2014-05-19 18:12:29,413 [8] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:12:29,417 [8] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:12:29,451 [8] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory : Using dialect defined converter
-2014-05-19 18:12:29,451 [8] INFO  NHibernate.Cfg.SettingsFactory : Generate SQL with comments: disabled
-2014-05-19 18:12:29,452 [8] INFO  NHibernate.Connection.ConnectionProviderFactory : Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-2014-05-19 18:12:29,453 [8] INFO  NHibernate.Connection.ConnectionProvider : Configuring ConnectionProvider
-2014-05-19 18:12:29,463 [8] INFO  NHibernate.Cfg.SettingsFactory : Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
-2014-05-19 18:12:29,463 [8] INFO  NHibernate.Cfg.SettingsFactory : Optimize cache for minimal puts: False
-2014-05-19 18:12:29,463 [8] INFO  NHibernate.Cfg.SettingsFactory : Connection release mode: auto
-2014-05-19 18:12:29,463 [8] INFO  NHibernate.Cfg.SettingsFactory : Default batch fetch size: 1
-2014-05-19 18:12:29,463 [8] INFO  NHibernate.Cfg.SettingsFactory : Statistics: disabled
-2014-05-19 18:12:29,463 [8] INFO  NHibernate.Cfg.SettingsFactory : Deleted entity synthetic identifier rollback: disabled
-2014-05-19 18:12:29,464 [8] INFO  NHibernate.Cfg.SettingsFactory : Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-2014-05-19 18:12:29,465 [8] INFO  NHibernate.Cfg.SettingsFactory : Query language substitutions: {}
-2014-05-19 18:12:29,465 [8] INFO  NHibernate.Cfg.SettingsFactory : cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2014-05-19 18:12:29,466 [8] INFO  NHibernate.Cfg.SettingsFactory : Order SQL inserts for batching: disabled
-2014-05-19 18:12:29,466 [8] DEBUG NHibernate.Cfg.SettingsFactory : Wrap result sets: disabled
-2014-05-19 18:12:29,466 [8] INFO  NHibernate.Cfg.SettingsFactory : Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2014-05-19 18:12:29,467 [8] INFO  NHibernate.Cfg.SettingsFactory : Default entity-mode: Poco
-2014-05-19 18:12:29,467 [8] INFO  NHibernate.Cfg.SettingsFactory : Named query checking : enabled
-2014-05-19 18:12:29,479 [8] INFO  NHibernate.Impl.SessionFactoryImpl : building session factory
-2014-05-19 18:12:29,480 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : Session factory constructed with filter configurations : {}
-2014-05-19 18:12:29,480 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'dialect'='NHibernate.Dialect.MySQL5Dialect', 'connection.driver_class'='NHibernate.Driver.MySqlDataDriver', 'connection.connection_string'='Server=sql3.freemysqlhosting.net;Database=sql340632;User ID=sql340632;Password=eF5!jX5!;', 'use_proxy_validator'='false', 'hbm2ddl.auto'='create'}
-2014-05-19 18:12:29,481 [8] DEBUG NHibernate.Connection.DriverConnectionProvider : Obtaining IDbConnection from Driver
-2014-05-19 18:12:31,886 [8] DEBUG NHibernate.Connection.ConnectionProvider : Closing connection
-2014-05-19 18:12:31,946 [8] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer : No custom accessors found for entity: Contracts.Audit
-2014-05-19 18:12:31,949 [8] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer : No custom accessors found for entity: Contracts.Audit
-2014-05-19 18:12:31,965 [8] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer : Create Instantiator using optimizer for:Contracts.Audit
-2014-05-19 18:12:32,013 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Static SQL for entity: Contracts.Audit
-2014-05-19 18:12:32,013 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Version select: SELECT Id FROM Audit WHERE Id = ?
-2014-05-19 18:12:32,013 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Snapshot select: SELECT audit_.Id, audit_.AccountNumber as AccountN2_0_, audit_.Money as Money0_, audit_.Date as Date0_ FROM Audit audit_ WHERE audit_.Id=?
-2014-05-19 18:12:32,014 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Insert 0: INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?, ?, ?, ?)
-2014-05-19 18:12:32,014 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Update 0: UPDATE Audit SET AccountNumber = ?, Money = ?, Date = ? WHERE Id = ?
-2014-05-19 18:12:32,014 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Delete 0: DELETE FROM Audit WHERE Id = ?
-2014-05-19 18:12:32,037 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:12:32,038 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:12:32,038 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:12:32,038 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:12:32,038 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:12:32,038 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:12:32,039 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:12:32,040 [8] DEBUG NHibernate.Impl.SessionFactoryObjectFactory : initializing class SessionFactoryObjectFactory
-2014-05-19 18:12:32,040 [8] DEBUG NHibernate.Impl.SessionFactoryObjectFactory : registered: 3ef6bd3a39d74c2ca47a98cc29c44bd6(unnamed)
-2014-05-19 18:12:32,040 [8] INFO  NHibernate.Impl.SessionFactoryObjectFactory : no name configured
-2014-05-19 18:12:32,040 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : Instantiated session factory
-2014-05-19 18:12:32,043 [8] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:12:32,044 [8] INFO  NHibernate.Cfg.Configuration : checking mappings queue
-2014-05-19 18:12:32,044 [8] INFO  NHibernate.Cfg.Configuration : processing one-to-many association mappings
-2014-05-19 18:12:32,044 [8] INFO  NHibernate.Cfg.Configuration : processing one-to-one association property references
-2014-05-19 18:12:32,044 [8] INFO  NHibernate.Cfg.Configuration : processing foreign key constraints
-2014-05-19 18:12:32,044 [8] INFO  NHibernate.Cfg.Configuration : processing filters (second pass)
-2014-05-19 18:12:32,047 [8] INFO  NHibernate.Cfg.Configuration : checking mappings queue
-2014-05-19 18:12:32,047 [8] INFO  NHibernate.Cfg.Configuration : processing one-to-many association mappings
-2014-05-19 18:12:32,047 [8] INFO  NHibernate.Cfg.Configuration : processing one-to-one association property references
-2014-05-19 18:12:32,047 [8] INFO  NHibernate.Cfg.Configuration : processing foreign key constraints
-2014-05-19 18:12:32,047 [8] INFO  NHibernate.Cfg.Configuration : processing filters (second pass)
-2014-05-19 18:12:32,051 [8] INFO  NHibernate.Connection.ConnectionProviderFactory : Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-2014-05-19 18:12:32,051 [8] INFO  NHibernate.Connection.ConnectionProvider : Configuring ConnectionProvider
-2014-05-19 18:12:32,051 [8] DEBUG NHibernate.Connection.DriverConnectionProvider : Obtaining IDbConnection from Driver
-2014-05-19 18:12:32,708 [8] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport : 
-    drop table if exists Audit
-2014-05-19 18:12:33,075 [8] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport : 
-    create table Audit (
-        Id BINARY(16) not null,
-       AccountNumber VARCHAR(255),
-       Money BIGINT,
-       Date DATETIME,
-       primary key (Id)
-    )
-2014-05-19 18:12:33,428 [8] DEBUG NHibernate.Connection.ConnectionProvider : Closing connection
-2014-05-19 18:12:33,428 [8] DEBUG NHibernate.Connection.ConnectionProvider : Disposing of ConnectionProvider.
-2014-05-19 18:12:33,431 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : Checking 0 named HQL queries
-2014-05-19 18:12:33,431 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : Checking 0 named SQL queries
-2014-05-19 18:12:33,445 [8] DEBUG NHibernate.Impl.SessionImpl : [session-id=31993bd4-baa2-419b-a0d6-48a26628f4d0] opened session at timestamp: 635361199534, for session factory: [/3ef6bd3a39d74c2ca47a98cc29c44bd6]
-2014-05-19 18:12:33,448 [8] DEBUG NHibernate.Transaction.AdoTransaction : Begin (Unspecified)
-2014-05-19 18:12:33,448 [8] DEBUG NHibernate.Connection.DriverConnectionProvider : Obtaining IDbConnection from Driver
-2014-05-19 18:12:34,922 [8] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener : saving transient instance
-2014-05-19 18:12:34,924 [8] DEBUG NHibernate.Event.Default.AbstractSaveEventListener : generated identifier: 84555ff3-73c2-41f0-bf04-473dfa9c1157, using strategy: NHibernate.Id.GuidGenerator
-2014-05-19 18:12:34,925 [8] DEBUG NHibernate.Event.Default.AbstractSaveEventListener : saving [Contracts.Audit#84555ff3-73c2-41f0-bf04-473dfa9c1157]
-2014-05-19 18:12:34,938 [8] DEBUG NHibernate.Transaction.AdoTransaction : Start Commit
-2014-05-19 18:12:34,940 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : flushing session
-2014-05-19 18:12:34,940 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : processing flush-time cascades
-2014-05-19 18:12:34,942 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : dirty checking collections
-2014-05-19 18:12:34,943 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushing entities and processing referenced collections
-2014-05-19 18:12:34,950 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Processing unreferenced collections
-2014-05-19 18:12:34,950 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Scheduling collection removes/(re)creates/updates
-2014-05-19 18:12:34,951 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2014-05-19 18:12:34,951 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2014-05-19 18:12:34,951 [8] DEBUG NHibernate.Impl.Printer : listing entities:
-2014-05-19 18:12:34,953 [8] DEBUG NHibernate.Impl.Printer : Contracts.Audit{'Id'='84555ff3-73c2-41f0-bf04-473dfa9c1157', 'AccountNumber'='123456', 'Money'='123', 'Date'='2014-05-19 18:12:34'}
-2014-05-19 18:12:34,953 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : executing flush
-2014-05-19 18:12:34,953 [8] DEBUG NHibernate.AdoNet.ConnectionManager : registering flush begin
-2014-05-19 18:12:34,957 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Inserting entity: [Contracts.Audit#84555ff3-73c2-41f0-bf04-473dfa9c1157]
-2014-05-19 18:12:34,964 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : Opened new IDbCommand, open IDbCommands: 1
-2014-05-19 18:12:34,964 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : Building an IDbCommand object for the SqlString: INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?, ?, ?, ?)
-2014-05-19 18:12:34,965 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Dehydrating entity: [Contracts.Audit#84555ff3-73c2-41f0-bf04-473dfa9c1157]
-2014-05-19 18:12:34,965 [8] DEBUG NHibernate.Type.StringType : binding '123456' to parameter: 0
-2014-05-19 18:12:34,966 [8] DEBUG NHibernate.Type.Int64Type : binding '123' to parameter: 1
-2014-05-19 18:12:34,966 [8] DEBUG NHibernate.Type.DateTimeType : binding '2014-05-19 18:12:34' to parameter: 2
-2014-05-19 18:12:34,967 [8] DEBUG NHibernate.Type.GuidType : binding '84555ff3-73c2-41f0-bf04-473dfa9c1157' to parameter: 3
-2014-05-19 18:12:34,970 [8] DEBUG NHibernate.SQL : INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?p0, ?p1, ?p2, ?p3);?p0 = '123456' [Type: String (6)], ?p1 = 123 [Type: Int64 (0)], ?p2 = 2014-05-19 18:12:34 [Type: DateTime (0)], ?p3 = 84555ff3-73c2-41f0-bf04-473dfa9c1157 [Type: Guid (0)]
-2014-05-19 18:12:34,971 [8] DEBUG NHibernate.Transaction.AdoTransaction : Enlist Command
-2014-05-19 18:12:35,908 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : ExecuteNonQuery took 937 ms
-2014-05-19 18:12:35,910 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : ExecuteBatch for 1 statements took 0 ms
-2014-05-19 18:12:35,912 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : Closed IDbCommand, open IDbCommands: 0
-2014-05-19 18:12:35,912 [8] DEBUG NHibernate.AdoNet.ConnectionManager : registering flush end
-2014-05-19 18:12:35,913 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : post flush
-2014-05-19 18:12:35,914 [8] DEBUG NHibernate.Impl.SessionImpl : before transaction completion
-2014-05-19 18:12:36,360 [8] DEBUG NHibernate.Transaction.AdoTransaction : IDbTransaction Committed
-2014-05-19 18:12:36,361 [8] DEBUG NHibernate.Impl.SessionImpl : transaction completion
-2014-05-19 18:12:36,362 [8] DEBUG NHibernate.AdoNet.ConnectionManager : aggressively releasing database connection
-2014-05-19 18:12:36,363 [8] DEBUG NHibernate.Connection.ConnectionProvider : Closing connection
-2014-05-19 18:12:36,369 [8] DEBUG NHibernate.Transaction.AdoTransaction : IDbTransaction disposed.
-2014-05-19 18:12:36,369 [8] INFO  AuditorService.Logger : Created new Audit for Account number: 123456
-2014-05-19 18:12:36,370 [8] DEBUG NHibernate.Impl.SessionImpl : [session-id=31993bd4-baa2-419b-a0d6-48a26628f4d0] running ISession.Dispose()
-2014-05-19 18:12:36,371 [8] DEBUG NHibernate.Impl.SessionImpl : [session-id=31993bd4-baa2-419b-a0d6-48a26628f4d0] executing real Dispose(True)
-2014-05-19 18:12:36,373 [8] DEBUG NHibernate.Impl.SessionImpl : closing session
-2014-05-19 18:12:36,373 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : running BatcherImpl.Dispose(true)
-2014-05-19 18:12:36,380 [8] INFO  AuditorService.Logger : Test end
-2014-05-19 18:12:36,803 [8] INFO  AuditorService.Logger : Exiting...
-2014-05-19 18:13:19,795 [8] INFO  AuditorService.Logger : Initialising...
-2014-05-19 18:13:20,701 [8] INFO  AuditorService.Logger : Service has started
-2014-05-19 18:13:20,701 [8] INFO  AuditorService.Logger : 'Alive' signal sent
-2014-05-19 18:13:20,702 [8] INFO  AuditorService.Logger : Service has setup the timer
-2014-05-19 18:13:20,702 [8] INFO  AuditorService.Logger : Service is ready
-2014-05-19 18:13:20,702 [8] INFO  AuditorService.Logger : Test start
-2014-05-19 18:13:21,220 [8] INFO  NHibernate.Cfg.Environment : NHibernate 3.3.1.4000 (3.3.3.GA)
-2014-05-19 18:13:21,232 [8] INFO  NHibernate.Cfg.Environment : hibernate-configuration section not found in application configuration file
-2014-05-19 18:13:21,232 [8] INFO  NHibernate.Cfg.Environment : Bytecode provider name : lcg
-2014-05-19 18:13:21,233 [8] INFO  NHibernate.Cfg.Environment : Using reflection optimizer
-2014-05-19 18:13:21,266 [8] DEBUG NHibernate.Cfg.Configuration : connection.provider=NHibernate.Connection.DriverConnectionProvider
-2014-05-19 18:13:21,266 [8] DEBUG NHibernate.Cfg.Configuration : dialect=NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:13:21,266 [8] DEBUG NHibernate.Cfg.Configuration : connection.driver_class=NHibernate.Driver.MySqlDataDriver
-2014-05-19 18:13:21,266 [8] DEBUG NHibernate.Cfg.Configuration : connection.connection_string=Server=sql3.freemysqlhosting.net;Database=sql340632;User ID=sql340632;Password=eF5!jX5!;
-2014-05-19 18:13:21,266 [8] DEBUG NHibernate.Cfg.Configuration : use_proxy_validator=false
-2014-05-19 18:13:21,267 [8] DEBUG NHibernate.Cfg.Configuration : properties: System.Collections.Generic.Dictionary`2[System.String,System.String]
-2014-05-19 18:13:21,268 [8] INFO  NHibernate.Cfg.Configuration : Mapping resource: Contracts.Mappings.Audit.hbm.xml
-2014-05-19 18:13:21,322 [8] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:13:21,365 [8] INFO  NHibernate.Cfg.XmlHbmBinding.Binder : Mapping class: Contracts.Audit -> Audit
-2014-05-19 18:13:21,390 [8] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Id -> Id, type: Guid
-2014-05-19 18:13:21,402 [8] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: AccountNumber -> AccountNumber, type: String
-2014-05-19 18:13:21,403 [8] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Money -> Money, type: Int64
-2014-05-19 18:13:21,403 [8] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder : Mapped property: Date -> Date, type: DateTime
-2014-05-19 18:13:21,408 [8] INFO  NHibernate.Cfg.Configuration : checking mappings queue
-2014-05-19 18:13:21,408 [8] INFO  NHibernate.Cfg.Configuration : processing one-to-many association mappings
-2014-05-19 18:13:21,408 [8] INFO  NHibernate.Cfg.Configuration : processing one-to-one association property references
-2014-05-19 18:13:21,408 [8] INFO  NHibernate.Cfg.Configuration : processing foreign key constraints
-2014-05-19 18:13:21,409 [8] INFO  NHibernate.Cfg.Configuration : processing filters (second pass)
-2014-05-19 18:13:21,417 [8] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:13:21,421 [8] INFO  NHibernate.Dialect.Dialect : Using dialect: NHibernate.Dialect.MySQL5Dialect
-2014-05-19 18:13:21,454 [8] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory : Using dialect defined converter
-2014-05-19 18:13:21,454 [8] INFO  NHibernate.Cfg.SettingsFactory : Generate SQL with comments: disabled
-2014-05-19 18:13:21,455 [8] INFO  NHibernate.Connection.ConnectionProviderFactory : Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
-2014-05-19 18:13:21,456 [8] INFO  NHibernate.Connection.ConnectionProvider : Configuring ConnectionProvider
-2014-05-19 18:13:21,464 [8] INFO  NHibernate.Cfg.SettingsFactory : Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
-2014-05-19 18:13:21,465 [8] INFO  NHibernate.Cfg.SettingsFactory : Optimize cache for minimal puts: False
-2014-05-19 18:13:21,465 [8] INFO  NHibernate.Cfg.SettingsFactory : Connection release mode: auto
-2014-05-19 18:13:21,465 [8] INFO  NHibernate.Cfg.SettingsFactory : Default batch fetch size: 1
-2014-05-19 18:13:21,465 [8] INFO  NHibernate.Cfg.SettingsFactory : Statistics: disabled
-2014-05-19 18:13:21,465 [8] INFO  NHibernate.Cfg.SettingsFactory : Deleted entity synthetic identifier rollback: disabled
-2014-05-19 18:13:21,466 [8] INFO  NHibernate.Cfg.SettingsFactory : Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-2014-05-19 18:13:21,466 [8] INFO  NHibernate.Cfg.SettingsFactory : Query language substitutions: {}
-2014-05-19 18:13:21,467 [8] INFO  NHibernate.Cfg.SettingsFactory : cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2014-05-19 18:13:21,468 [8] INFO  NHibernate.Cfg.SettingsFactory : Order SQL inserts for batching: disabled
-2014-05-19 18:13:21,468 [8] DEBUG NHibernate.Cfg.SettingsFactory : Wrap result sets: disabled
-2014-05-19 18:13:21,468 [8] INFO  NHibernate.Cfg.SettingsFactory : Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2014-05-19 18:13:21,468 [8] INFO  NHibernate.Cfg.SettingsFactory : Default entity-mode: Poco
-2014-05-19 18:13:21,468 [8] INFO  NHibernate.Cfg.SettingsFactory : Named query checking : enabled
-2014-05-19 18:13:21,481 [8] INFO  NHibernate.Impl.SessionFactoryImpl : building session factory
-2014-05-19 18:13:21,481 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : Session factory constructed with filter configurations : {}
-2014-05-19 18:13:21,482 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'dialect'='NHibernate.Dialect.MySQL5Dialect', 'connection.driver_class'='NHibernate.Driver.MySqlDataDriver', 'connection.connection_string'='Server=sql3.freemysqlhosting.net;Database=sql340632;User ID=sql340632;Password=eF5!jX5!;', 'use_proxy_validator'='false'}
-2014-05-19 18:13:21,483 [8] DEBUG NHibernate.Connection.DriverConnectionProvider : Obtaining IDbConnection from Driver
-2014-05-19 18:13:23,530 [8] DEBUG NHibernate.Connection.ConnectionProvider : Closing connection
-2014-05-19 18:13:23,590 [8] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer : No custom accessors found for entity: Contracts.Audit
-2014-05-19 18:13:23,593 [8] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer : No custom accessors found for entity: Contracts.Audit
-2014-05-19 18:13:23,609 [8] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer : Create Instantiator using optimizer for:Contracts.Audit
-2014-05-19 18:13:23,657 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Static SQL for entity: Contracts.Audit
-2014-05-19 18:13:23,657 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Version select: SELECT Id FROM Audit WHERE Id = ?
-2014-05-19 18:13:23,657 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Snapshot select: SELECT audit_.Id, audit_.AccountNumber as AccountN2_0_, audit_.Money as Money0_, audit_.Date as Date0_ FROM Audit audit_ WHERE audit_.Id=?
-2014-05-19 18:13:23,657 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Insert 0: INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?, ?, ?, ?)
-2014-05-19 18:13:23,657 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Update 0: UPDATE Audit SET AccountNumber = ?, Money = ?, Date = ? WHERE Id = ?
-2014-05-19 18:13:23,658 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister :  Delete 0: DELETE FROM Audit WHERE Id = ?
-2014-05-19 18:13:23,681 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:13:23,682 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:13:23,682 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:13:23,682 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:13:23,682 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=? for update
-2014-05-19 18:13:23,683 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:13:23,683 [8] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader : Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity Contracts.Audit: SELECT audit0_.Id as Id0_0_, audit0_.AccountNumber as AccountN2_0_0_, audit0_.Money as Money0_0_, audit0_.Date as Date0_0_ FROM Audit audit0_ WHERE audit0_.Id=?
-2014-05-19 18:13:23,684 [8] DEBUG NHibernate.Impl.SessionFactoryObjectFactory : initializing class SessionFactoryObjectFactory
-2014-05-19 18:13:23,684 [8] DEBUG NHibernate.Impl.SessionFactoryObjectFactory : registered: 2e4ad7281f004001802bfe000c1e8bbf(unnamed)
-2014-05-19 18:13:23,684 [8] INFO  NHibernate.Impl.SessionFactoryObjectFactory : no name configured
-2014-05-19 18:13:23,684 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : Instantiated session factory
-2014-05-19 18:13:23,686 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : Checking 0 named HQL queries
-2014-05-19 18:13:23,686 [8] DEBUG NHibernate.Impl.SessionFactoryImpl : Checking 0 named SQL queries
-2014-05-19 18:13:23,699 [8] DEBUG NHibernate.Impl.SessionImpl : [session-id=9b910191-b283-48b2-b463-21f02b0a5afd] opened session at timestamp: 635361200036, for session factory: [/2e4ad7281f004001802bfe000c1e8bbf]
-2014-05-19 18:13:23,702 [8] DEBUG NHibernate.Transaction.AdoTransaction : Begin (Unspecified)
-2014-05-19 18:13:23,703 [8] DEBUG NHibernate.Connection.DriverConnectionProvider : Obtaining IDbConnection from Driver
-2014-05-19 18:13:24,892 [8] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener : saving transient instance
-2014-05-19 18:13:24,893 [8] DEBUG NHibernate.Event.Default.AbstractSaveEventListener : generated identifier: 25fd37ce-3edf-41ff-b4a9-6ac807cd3689, using strategy: NHibernate.Id.GuidGenerator
-2014-05-19 18:13:24,894 [8] DEBUG NHibernate.Event.Default.AbstractSaveEventListener : saving [Contracts.Audit#25fd37ce-3edf-41ff-b4a9-6ac807cd3689]
-2014-05-19 18:13:24,908 [8] DEBUG NHibernate.Transaction.AdoTransaction : Start Commit
-2014-05-19 18:13:24,909 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : flushing session
-2014-05-19 18:13:24,910 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : processing flush-time cascades
-2014-05-19 18:13:24,912 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : dirty checking collections
-2014-05-19 18:13:24,912 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushing entities and processing referenced collections
-2014-05-19 18:13:24,919 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Processing unreferenced collections
-2014-05-19 18:13:24,920 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Scheduling collection removes/(re)creates/updates
-2014-05-19 18:13:24,920 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-2014-05-19 18:13:24,920 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2014-05-19 18:13:24,921 [8] DEBUG NHibernate.Impl.Printer : listing entities:
-2014-05-19 18:13:24,922 [8] DEBUG NHibernate.Impl.Printer : Contracts.Audit{'Id'='25fd37ce-3edf-41ff-b4a9-6ac807cd3689', 'AccountNumber'='654321', 'Money'='321', 'Date'='2014-05-19 18:13:24'}
-2014-05-19 18:13:24,923 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : executing flush
-2014-05-19 18:13:24,923 [8] DEBUG NHibernate.AdoNet.ConnectionManager : registering flush begin
-2014-05-19 18:13:24,926 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Inserting entity: [Contracts.Audit#25fd37ce-3edf-41ff-b4a9-6ac807cd3689]
-2014-05-19 18:13:24,934 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : Opened new IDbCommand, open IDbCommands: 1
-2014-05-19 18:13:24,934 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : Building an IDbCommand object for the SqlString: INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?, ?, ?, ?)
-2014-05-19 18:13:24,934 [8] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister : Dehydrating entity: [Contracts.Audit#25fd37ce-3edf-41ff-b4a9-6ac807cd3689]
-2014-05-19 18:13:24,935 [8] DEBUG NHibernate.Type.StringType : binding '654321' to parameter: 0
-2014-05-19 18:13:24,936 [8] DEBUG NHibernate.Type.Int64Type : binding '321' to parameter: 1
-2014-05-19 18:13:24,936 [8] DEBUG NHibernate.Type.DateTimeType : binding '2014-05-19 18:13:24' to parameter: 2
-2014-05-19 18:13:24,936 [8] DEBUG NHibernate.Type.GuidType : binding '25fd37ce-3edf-41ff-b4a9-6ac807cd3689' to parameter: 3
-2014-05-19 18:13:24,941 [8] DEBUG NHibernate.SQL : INSERT INTO Audit (AccountNumber, Money, Date, Id) VALUES (?p0, ?p1, ?p2, ?p3);?p0 = '654321' [Type: String (6)], ?p1 = 321 [Type: Int64 (0)], ?p2 = 2014-05-19 18:13:24 [Type: DateTime (0)], ?p3 = 25fd37ce-3edf-41ff-b4a9-6ac807cd3689 [Type: Guid (0)]
-2014-05-19 18:13:24,942 [8] DEBUG NHibernate.Transaction.AdoTransaction : Enlist Command
-2014-05-19 18:13:25,422 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : ExecuteNonQuery took 480 ms
-2014-05-19 18:13:25,425 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : ExecuteBatch for 1 statements took 0 ms
-2014-05-19 18:13:25,426 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : Closed IDbCommand, open IDbCommands: 0
-2014-05-19 18:13:25,427 [8] DEBUG NHibernate.AdoNet.ConnectionManager : registering flush end
-2014-05-19 18:13:25,427 [8] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener : post flush
-2014-05-19 18:13:25,428 [8] DEBUG NHibernate.Impl.SessionImpl : before transaction completion
-2014-05-19 18:13:25,721 [8] DEBUG NHibernate.Transaction.AdoTransaction : IDbTransaction Committed
-2014-05-19 18:13:25,722 [8] DEBUG NHibernate.Impl.SessionImpl : transaction completion
-2014-05-19 18:13:25,722 [8] DEBUG NHibernate.AdoNet.ConnectionManager : aggressively releasing database connection
-2014-05-19 18:13:25,722 [8] DEBUG NHibernate.Connection.ConnectionProvider : Closing connection
-2014-05-19 18:13:25,724 [8] DEBUG NHibernate.Transaction.AdoTransaction : IDbTransaction disposed.
-2014-05-19 18:13:25,724 [8] INFO  AuditorService.Logger : Created new Audit for Account number: 654321
-2014-05-19 18:13:25,725 [8] DEBUG NHibernate.Impl.SessionImpl : [session-id=9b910191-b283-48b2-b463-21f02b0a5afd] running ISession.Dispose()
-2014-05-19 18:13:25,725 [8] DEBUG NHibernate.Impl.SessionImpl : [session-id=9b910191-b283-48b2-b463-21f02b0a5afd] executing real Dispose(True)
-2014-05-19 18:13:25,725 [8] DEBUG NHibernate.Impl.SessionImpl : closing session
-2014-05-19 18:13:25,726 [8] DEBUG NHibernate.AdoNet.AbstractBatcher : running BatcherImpl.Dispose(true)
-2014-05-19 18:13:25,728 [8] INFO  AuditorService.Logger : Test end
-2014-05-19 18:13:26,186 [8] INFO  AuditorService.Logger : Exiting...
+2014-05-22 17:28:10,588 [7] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:28:11,672 [7] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:28:33,157 [7] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.1.42:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:21.1287544. TCP error code 10060: A connection attempt failed because the connected party did not properly respond after a period of time or established connection failed because connected host has failed to respond 192.168.1.42:50000. 
+2014-05-22 17:28:39,346 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:28:40,141 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:29:01,352 [9] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.1.42:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:21.0501154. TCP error code 10060: A connection attempt failed because the connected party did not properly respond after a period of time or established connection failed because connected host has failed to respond 192.168.1.42:50000. 
+2014-05-22 17:30:25,812 [8] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:30:26,397 [8] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:30:26,397 [8] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:30:47,562 [8] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.1.42:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:21.0201970. TCP error code 10060: A connection attempt failed because the connected party did not properly respond after a period of time or established connection failed because connected host has failed to respond 192.168.1.42:50000. 
+2014-05-22 17:32:26,686 [8] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:32:27,273 [8] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:32:27,273 [8] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:32:48,434 [8] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.1.42:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:21.0170323. TCP error code 10060: A connection attempt failed because the connected party did not properly respond after a period of time or established connection failed because connected host has failed to respond 192.168.1.42:50000. 
+2014-05-22 17:37:45,821 [10] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:37:46,447 [10] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:37:46,447 [10] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:38:07,686 [10] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.1.42:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:21.0113635. TCP error code 10060: A connection attempt failed because the connected party did not properly respond after a period of time or established connection failed because connected host has failed to respond 192.168.1.42:50000. 
+2014-05-22 17:38:33,231 [7] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:38:33,797 [7] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:38:33,797 [7] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:39:16,439 [7] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 17:39:16,441 [7] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:39:16,441 [7] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 17:39:16,441 [7] INFO  AuditorService.Logger : Service is ready
+2014-05-22 17:40:43,394 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:40:43,980 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:40:43,980 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:40:44,155 [9] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 17:40:44,159 [9] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:40:44,159 [9] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 17:40:44,160 [9] INFO  AuditorService.Logger : Service is ready
+2014-05-22 17:42:29,810 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:42:30,374 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:42:30,374 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:42:31,534 [9] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0178349. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 17:42:39,249 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:42:39,966 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:42:39,966 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:42:40,444 [9] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 17:42:40,455 [9] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:42:40,456 [9] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 17:42:40,456 [9] INFO  AuditorService.Logger : Service is ready
+2014-05-22 17:46:35,311 [10] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:46:35,896 [10] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:46:35,896 [10] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:46:36,076 [10] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 17:46:36,079 [10] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:46:36,080 [10] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 17:46:36,080 [10] INFO  AuditorService.Logger : Service is ready
+2014-05-22 17:46:42,982 [10] INFO  AuditorService.Logger : Initialising...
+2014-05-22 17:46:43,591 [10] INFO  AuditorService.Logger : Service has started
+2014-05-22 17:46:43,591 [10] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 17:46:43,771 [10] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 17:46:43,774 [10] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:46:43,775 [10] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 17:46:43,775 [10] INFO  AuditorService.Logger : Service is ready
+2014-05-22 17:46:46,783 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:46:49,780 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:46:52,780 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:46:55,781 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:46:58,782 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 17:47:00,348 [10] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 17:47:00,348 [10] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:06:41,330 [7] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:06:41,926 [7] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:06:41,926 [7] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:06:43,189 [7] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0290075. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:08:34,087 [8] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:08:34,680 [8] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:08:34,681 [8] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:08:35,840 [8] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0168522. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:09:20,208 [8] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:09:20,808 [8] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:09:20,808 [8] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:09:20,993 [8] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:09:20,998 [8] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:09:20,998 [8] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:09:20,998 [8] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:10:13,829 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:10:14,397 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:10:14,397 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:10:14,620 [9] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:10:14,622 [9] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:14,623 [9] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:10:14,623 [9] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:10:17,637 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:20,630 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:23,632 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:26,633 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:29,633 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:32,633 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:35,634 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:38,635 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:41,635 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:44,635 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:47,637 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:50,637 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:53,639 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:56,637 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:10:59,640 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:02,641 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:05,641 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:08,642 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:11,643 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:14,646 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:17,647 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:20,646 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:23,646 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:26,645 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:29,647 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:32,648 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:35,649 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:38,649 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:41,650 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:44,650 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:47,651 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:50,651 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:53,652 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:56,652 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:11:59,653 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:12:02,653 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:12:05,655 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:12:08,655 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:12:11,655 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:12:14,656 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:12:17,657 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:12:20,349 [9] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 18:12:20,350 [9] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:14:48,027 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:14:48,655 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:14:48,655 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:14:48,833 [9] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:14:48,837 [9] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:14:48,837 [9] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:14:48,838 [9] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:14:49,020 [9] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 18:14:49,020 [9] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:15:08,470 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:15:09,058 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:15:09,059 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:15:09,238 [9] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:15:09,242 [9] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:15:09,243 [9] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:15:09,243 [9] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:15:12,259 [6] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:15:14,356 [9] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 18:15:14,356 [9] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:15:33,062 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:15:33,669 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:15:33,669 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:15:46,547 [10] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:15:47,160 [10] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:15:47,160 [10] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:16:40,137 [10] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:16:40,139 [10] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:16:40,140 [10] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:16:40,140 [10] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:16:40,142 [10] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 18:16:40,142 [10] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:18:28,649 [8] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:18:29,201 [8] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:18:29,201 [8] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:18:29,412 [8] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:18:29,416 [8] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:29,417 [8] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:18:29,417 [8] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:18:32,424 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:35,422 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:38,423 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:41,423 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:44,424 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:47,424 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:50,425 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:53,425 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:56,426 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:18:59,427 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:02,428 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:05,430 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:08,431 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:11,430 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:14,431 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:17,432 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:20,433 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:23,433 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:19:38,952 [21] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:19:38,987 [19] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:19:38,987 [20] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:19:38,987 [22] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:19:38,988 [19] ERROR AuditorService.Logger : The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.
+2014-05-22 18:19:38,988 [21] ERROR AuditorService.Logger : The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.
+2014-05-22 18:19:38,989 [22] ERROR AuditorService.Logger : The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.
+2014-05-22 18:19:38,989 [20] ERROR AuditorService.Logger : The server did not provide a meaningful reply; this might be caused by a contract mismatch, a premature session shutdown or an internal server error.
+2014-05-22 18:19:39,037 [18] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:19:39,037 [18] ERROR AuditorService.Logger : The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9699801'.
+2014-05-22 18:19:40,136 [20] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0427181. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:40,173 [21] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0387155. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:40,174 [22] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0307101. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:40,178 [18] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0377144. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:40,179 [19] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0307101. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:41,342 [19] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0928889. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:41,350 [21] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0948892. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:41,351 [18] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0938891. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:41,352 [20] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0948892. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:41,352 [22] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0563488. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:42,495 [18] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0377918. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:42,527 [20] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0087720. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:42,529 [22] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0367896. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:42,533 [21] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0387920. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:42,541 [15] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:19:42,542 [15] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:19:42,543 [19] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0397932. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:43,617 [20] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0010530. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:43,654 [18] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0100595. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:43,664 [15] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0647179. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:43,674 [21] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0250716. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:43,675 [19] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0270703. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:43,675 [22] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0400805. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:44,686 [20] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0096228. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:44,758 [18] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0346399. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:44,777 [15] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0436454. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:44,782 [19] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0416431. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:44,786 [21] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0426448. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:44,802 [14] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:19:44,802 [14] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:19:44,803 [22] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0426443. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:45,738 [20] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0068856. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:45,863 [18] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0102294. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:45,875 [15] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0162329. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:45,994 [21] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0432482. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:45,997 [22] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0382464. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:46,007 [19] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0392455. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:46,010 [14] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0472535. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:46,762 [20] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0092467. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:47,125 [21] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0373643. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:47,151 [14] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0383655. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:47,154 [15] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0093457. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:47,170 [18] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0323610. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:47,191 [19] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0333622. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:47,193 [22] ERROR AuditorService.Logger : Could not connect to net.tcp://192.168.0.90:50000/IServiceRepository. The connection attempt lasted for a time span of 00:00:01.0483721. TCP error code 10061: No connection could be made because the target machine actively refused it 192.168.0.90:50000. 
+2014-05-22 18:19:47,194 [8] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:19:47,194 [8] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:23:50,398 [10] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:23:50,980 [10] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:23:50,980 [10] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:23:51,166 [10] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:23:51,170 [10] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:23:51,171 [10] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:23:51,171 [10] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:23:54,178 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:23:57,175 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:00,176 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:03,176 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:06,177 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:09,177 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:12,178 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:15,178 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:18,178 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:21,179 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:24,179 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:27,180 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:30,181 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:33,181 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:36,183 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:39,183 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:42,183 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:45,183 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:48,184 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:51,185 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:54,186 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:24:57,186 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:00,186 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:03,187 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:06,188 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:09,189 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:12,189 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:15,190 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:18,191 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:21,191 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:24,192 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:27,192 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:30,192 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:33,192 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:36,193 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:39,194 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:42,195 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:45,196 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:48,197 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:51,198 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:54,198 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:25:57,199 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:26:00,199 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:26:03,200 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:26:06,201 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:26:09,202 [20] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:26:12,256 [20] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:12,256 [20] ERROR AuditorService.Logger : The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9799867'.
+2014-05-22 18:26:13,288 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:15,212 [8] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:15,213 [8] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:16,237 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:18,213 [21] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:18,213 [21] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:19,236 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:19,315 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:21,215 [17] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:21,216 [17] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:22,239 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:22,261 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:24,217 [16] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:24,218 [16] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:25,242 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:25,266 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:25,347 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:27,219 [15] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:27,219 [15] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:28,244 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:28,264 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:28,284 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:30,221 [14] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:30,221 [14] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:31,241 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:31,265 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:31,289 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:31,370 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:33,223 [13] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:33,224 [13] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:34,250 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:34,271 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:34,291 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:34,318 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:37,267 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:37,292 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:37,313 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:37,393 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:37,407 [12] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:37,407 [12] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:38,430 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:40,273 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:40,294 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:40,314 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:40,340 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:41,228 [22] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:41,228 [22] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:42,251 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:43,291 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:43,315 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:43,335 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:43,416 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:44,455 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:45,231 [23] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:45,232 [23] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:46,250 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:46,314 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:46,324 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:46,345 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:46,366 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:48,275 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:49,315 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:49,339 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:49,360 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:49,453 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:49,453 [24] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:49,454 [24] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:50,490 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:50,499 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:52,276 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:52,366 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:52,366 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:52,396 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:52,400 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:53,246 [18] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:53,246 [18] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:54,272 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:54,302 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:55,340 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:55,365 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:55,385 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:55,487 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:56,520 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:56,533 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:57,244 [11] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:26:57,244 [11] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:26:58,269 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:58,300 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:58,419 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:58,421 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:58,438 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:26:58,452 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:00,352 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:00,354 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:01,393 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:01,415 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:01,416 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:01,567 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:01,568 [25] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:01,569 [25] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:02,561 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:02,589 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:02,602 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:04,290 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:04,326 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:04,463 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:04,492 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:04,504 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:04,508 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:05,249 [27] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:05,250 [27] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:06,269 [27] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:06,387 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:06,397 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:07,419 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:07,447 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:07,460 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:07,600 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:08,581 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:08,631 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:08,644 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:09,252 [28] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:09,253 [28] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:10,278 [28] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:10,315 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:10,349 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:10,519 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:10,577 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:10,583 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:10,588 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:12,294 [27] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:12,423 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:12,433 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:13,459 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:13,481 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:13,495 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:13,643 [29] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:13,643 [29] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:13,644 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:14,607 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:14,716 [29] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:14,731 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:14,733 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:16,305 [28] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:16,346 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:16,373 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:16,547 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:16,631 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:16,639 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:16,643 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:17,257 [6] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:17,257 [6] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:18,283 [6] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:18,318 [27] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:18,454 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:18,467 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:19,576 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:19,576 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:19,579 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:19,678 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:20,635 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:20,757 [29] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:20,776 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:20,786 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:21,260 [30] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:21,260 [30] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:22,283 [30] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:22,329 [28] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:22,370 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:22,399 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:22,579 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:22,680 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:22,687 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:22,700 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:24,309 [6] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:24,349 [27] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:24,482 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:24,499 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:25,630 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:25,641 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:25,644 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:25,712 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:25,718 [31] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:25,719 [31] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:26,669 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:26,743 [31] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:26,783 [29] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:26,819 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:26,825 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:28,307 [30] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:28,353 [28] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:28,395 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:28,424 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:28,612 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:28,766 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:28,786 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:28,795 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:29,278 [33] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:29,279 [33] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:30,306 [33] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:30,337 [6] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:30,376 [27] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:30,509 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:30,530 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:31,663 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:31,741 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:31,763 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:31,763 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:32,748 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:32,777 [31] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:32,806 [29] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:32,859 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:32,865 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:33,273 [34] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:33,274 [34] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:34,290 [34] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:34,333 [30] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:34,379 [28] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:34,429 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:34,450 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:34,629 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:34,790 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:34,824 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:34,834 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:36,331 [33] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:36,361 [6] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:36,400 [27] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:36,532 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:36,553 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:37,723 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:37,766 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:37,806 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:37,818 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:37,824 [35] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:37,824 [35] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:38,787 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:38,809 [31] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:38,844 [29] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:38,858 [35] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:38,902 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:38,905 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,333 [34] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,357 [30] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,403 [28] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,453 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,475 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,654 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,813 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,859 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:40,872 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:41,278 [3] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:41,278 [3] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:42,304 [3] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:42,356 [33] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:42,388 [6] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:42,427 [27] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:42,558 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:42,584 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:43,747 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:43,791 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:43,839 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:43,853 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:44,824 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:44,848 [31] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:44,885 [29] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:44,896 [35] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:44,933 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:44,947 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:45,281 [36] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:45,281 [36] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:46,302 [36] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,360 [34] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,389 [30] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,420 [28] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,469 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,500 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,727 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,871 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,908 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:46,922 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:48,332 [3] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:48,382 [33] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:48,413 [6] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:48,454 [27] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:48,583 [18] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:48,608 [22] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:49,774 [14] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:49,817 [21] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:49,869 [20] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:49,903 [16] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:49,903 [37] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:49,903 [37] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:50,864 [24] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:50,885 [31] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:50,953 [29] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:50,960 [35] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:50,991 [37] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:51,001 [25] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:51,007 [12] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,329 [36] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,387 [34] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,457 [30] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,464 [28] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,494 [11] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,533 [23] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,754 [13] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,898 [17] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,967 [8] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:52,981 [15] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:27:53,300 [38] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:27:53,300 [38] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:27:54,450 [38] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,459 [3] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,466 [33] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,473 [6] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,480 [27] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,607 [18] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,621 [22] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,798 [14] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,831 [21] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,882 [20] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:27:54,924 [16] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:06,209 [24] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:06,225 [31] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:06,240 [29] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:06,250 [35] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:06,260 [37] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:06,271 [25] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:06,282 [12] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,804 [36] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,815 [34] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,826 [30] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,861 [28] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,869 [11] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,874 [23] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,878 [13] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,882 [17] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,886 [8] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:16,890 [15] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:28:38,820 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:28:39,403 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:28:39,404 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:28:55,554 [9] ERROR AuditorService.Logger : The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9759866'.
+2014-05-22 18:28:56,585 [9] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:29:02,609 [9] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:29:08,630 [9] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:29:13,965 [9] INFO  AuditorService.Logger : Reconnected. Registed again.
+2014-05-22 18:29:13,965 [9] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:29:24,440 [9] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:29:24,440 [9] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:29:24,440 [9] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:29:37,692 [9] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:29:37,694 [19] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:29:37,694 [19] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:29:37,694 [20] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:29:37,695 [20] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:29:37,717 [9] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:29:37,717 [21] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:29:37,718 [21] ERROR AuditorService.Logger : The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+2014-05-22 18:29:37,719 [18] ERROR AuditorService.Logger : Connection lost
+2014-05-22 18:29:37,720 [18] ERROR AuditorService.Logger : The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9990008'.
+2014-05-22 18:31:46,677 [10] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:31:47,272 [10] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:31:47,272 [10] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:32:05,444 [10] ERROR AuditorService.Logger : The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9769903'.
+2014-05-22 18:32:06,484 [10] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:32:12,509 [10] ERROR AuditorService.Logger : Could not connect. Trying again.
+2014-05-22 18:33:24,261 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:33:24,849 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:33:24,849 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:37:52,975 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:37:53,558 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:37:53,558 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:37:53,756 [9] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:37:53,759 [9] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:37:53,759 [9] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:37:53,759 [9] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:37:56,770 [19] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:37:59,766 [19] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:38:02,768 [19] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:38:05,768 [19] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:38:08,769 [19] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:38:11,769 [19] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:38:14,770 [19] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:38:20,733 [9] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 18:38:20,733 [9] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:39:16,996 [8] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:39:17,579 [8] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:39:17,579 [8] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:39:17,757 [8] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:39:17,760 [8] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:17,761 [8] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:39:17,761 [8] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:39:20,768 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:23,767 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:26,767 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:29,768 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:32,770 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:35,769 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:38,771 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:41,775 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:44,772 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:47,773 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:50,773 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:53,774 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:56,775 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:39:59,775 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:02,775 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:05,776 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:06,425 [8] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 18:40:06,426 [8] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:40:09,433 [9] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:40:10,046 [9] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:40:10,046 [9] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:40:10,236 [9] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:40:10,239 [9] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:10,239 [9] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:40:10,239 [9] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:40:13,034 [9] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 18:40:13,034 [9] INFO  AuditorService.Logger : Exiting...
+2014-05-22 18:40:39,508 [8] INFO  AuditorService.Logger : Initialising...
+2014-05-22 18:40:40,094 [8] INFO  AuditorService.Logger : Service has started
+2014-05-22 18:40:40,094 [8] INFO  AuditorService.Logger : Registering to repository...
+2014-05-22 18:40:40,272 [8] INFO  AuditorService.Logger : Service has been registered
+2014-05-22 18:40:40,275 [8] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:40,276 [8] INFO  AuditorService.Logger : Service has set the timer up
+2014-05-22 18:40:40,276 [8] INFO  AuditorService.Logger : Service is ready
+2014-05-22 18:40:43,283 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:46,281 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:49,281 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:52,281 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:55,283 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:40:58,284 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:01,284 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:04,286 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:07,286 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:10,285 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:13,287 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:16,308 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:19,290 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:22,290 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:25,291 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:28,291 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:31,293 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:34,292 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:37,294 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:40,293 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:43,294 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:46,295 [18] INFO  AuditorService.Logger : 'Alive' signal sent
+2014-05-22 18:41:46,422 [8] INFO  AuditorService.Logger : Service has been unregistered
+2014-05-22 18:41:46,422 [8] INFO  AuditorService.Logger : Exiting...

@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Configuration;
 using System.Timers;
+using System.Threading;
 using Contracts;
 using log4net;
 using NHibernate;
@@ -16,7 +17,8 @@ namespace AuditorService
     class Program
     {
         //for true: the AuditorService won't connect to the ServiceRepository
-        private static bool _test = true;
+        private static bool _test = false;
+        private static bool _sendAlive = true;
 
         private static IServiceRepository ServiceRepo { get; set; }
 
@@ -28,8 +30,9 @@ namespace AuditorService
             Log("Initialising...");
 
             //Configuration
+            string address = "net.tcp://192.168.0.91:" + ConfigurationSettings.AppSettings["port"] + "/IAuditorService";
             AuditorService auditor = new AuditorService();
-            ServiceHost sh = new ServiceHost(auditor, new Uri[] { new Uri("net.tcp://localhost:54390/IAuditorService") });
+            ServiceHost sh = new ServiceHost(auditor, new Uri[] { new Uri(address) });
             sh.AddServiceEndpoint(typeof(IAuditorService), new NetTcpBinding(SecurityMode.None), "net.tcp://0.0.0.0:54390/IAuditorService");
             ServiceMetadataBehavior metadata = sh.Description.Behaviors.Find<ServiceMetadataBehavior>();
             if (metadata == null)
@@ -45,32 +48,31 @@ namespace AuditorService
             Log("Service has started");
 
             if (!_test) 
-            { 
+            {
+                Log("Registering to repository...");
+
                 //registering
                 NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-
                 ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(ConfigurationSettings.AppSettings["ServiceRepositoryAddress"]));
                 ServiceRepo = cf.CreateChannel();
 
                 try
                 {
-                    ServiceRepo.RegisterService("AuditorService", "net.tcp://localhost:54390/IAuditorService");
+                    ServiceRepo.RegisterService("IAuditorService", address);
+                    Log("Service has been registered");
                 }
-                catch (EndpointNotFoundException e)
+                catch (Exception e)
                 {
+                    _sendAlive = false;
                     LogException(e.Message);
-                    Console.WriteLine("Press any key to exit...");
-                    Console.ReadKey();
-                    Environment.Exit(0);
+                    while (!ReRegister()) ;
                 }
-
-                Log("Service has been registered");
             }
 
             //setting up the timer
             SendAliveSignal();
 
-            Timer t = new Timer(1000 * 60); // 1000 milisecond * 60 = 1 minute
+            System.Timers.Timer t = new System.Timers.Timer(1000 * 3); // 1000 milisecond * 60 = 1 minute
             t.AutoReset = true;
             t.Elapsed += new System.Timers.ElapsedEventHandler(Alive);
             t.Start();
@@ -88,17 +90,16 @@ namespace AuditorService
             { 
                 try
                 {
-                    ServiceRepo.Unregister("AuditorService");
+                    _sendAlive = false;
+                    t.Stop();
+
+                    ServiceRepo.Unregister("IAuditorService");
+                    Log("Service has been unregistered");
                 }
-                catch (EndpointNotFoundException e)
+                catch (Exception e)
                 {
                     LogException(e.Message);
-                    Console.WriteLine("Press any key to exit...");
-                    Console.ReadKey();
-                    Environment.Exit(0);
                 }
-
-                Log("Service has been unregistered");
             }
 
             Log("Exiting...");
@@ -106,7 +107,10 @@ namespace AuditorService
 
         private static void Alive(object sender, System.Timers.ElapsedEventArgs e)
         {
-            SendAliveSignal();
+            if (_sendAlive)
+            {
+                SendAliveSignal();
+            }
         }
 
         private static void SendAliveSignal()
@@ -115,29 +119,58 @@ namespace AuditorService
             { 
                 try
                 {
-                    ServiceRepo.Alive("AuditorService");
+                    ServiceRepo.Alive("IAuditorService");
+                    Log("'Alive' signal sent");
                 }
-                catch (EndpointNotFoundException e)
+                catch (Exception e)
                 {
+                    _sendAlive = false;
+
+                    LogException("Connection lost");
                     LogException(e.Message);
-                    Console.WriteLine("Press any key to exit...");
-                    Console.ReadKey();
-                    Environment.Exit(0);
+
+                    while (!ReRegister()) ;
                 }
             }
-            
-            Log("'Alive' signal sent");
+        }
+
+        private static bool ReRegister()
+        {
+            try
+            {
+                NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+                ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(ConfigurationSettings.AppSettings["ServiceRepositoryAddress"]));
+                ServiceRepo = cf.CreateChannel();
+
+                Log("Connected.");
+
+                ServiceRepo.RegisterService("IAuditorService", "net.tcp://192.168.0.91:" + ConfigurationSettings.AppSettings["port"] + "/IAuditorService");
+                _sendAlive = true;
+
+                Log("Registed.");
+                
+                return true;
+            }
+            catch (EndpointNotFoundException ex)
+            {
+                LogException("Could not connect. Trying again.");
+                System.Threading.Thread.Sleep(5000);
+            }
+
+            return false;
         }
 
         private static void Log(String log)
         {
-            Console.WriteLine(log);
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now.ToString("HH:mm:ss") + ": " + log);
             Logger.log.Info(log);
         }
 
         private static void LogException(String log)
         {
-            Console.WriteLine(log);
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now.ToString("HH:mm:ss") + ": " + log);
             Logger.log.Error(log);
         }
     }
