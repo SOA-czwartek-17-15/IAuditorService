@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -178,45 +178,96 @@ namespace AuditorService
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, IncludeExceptionDetailInFaults = true)]
     public class AuditorService : IAuditorService
     {
-        public int GetNumberOfTransfersByDate(DateTime date)
-        {
-            return 0;
-        }
+        
+	public Audit GetLastAuditByAccount(string accountNumber)
+	{
+	Log("Service has started");
 
-        public int GetNumberOfTransfersByAccount(String accountNumber)
-        {
-            return 0;
-        }
+            if (!_test) 
+            {
+                Log("Registering to repository...");
 
-        public int GetTransferedMoneyByDate(DateTime date)
-        {
-            return 0;
-        }
+                //registering
+                NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+                ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(ConfigurationSettings.AppSettings["ServiceRepositoryAddress"]));
+                ServiceRepo = cf.CreateChannel();
 
-        public int GetTransferedMoneyByAccount(String accountNumber)
-        {
-            return 0;
-        }
+                try
+                {
+                    string location = ServiceRepo.GetServiceLocation("IAccountRepository");
+                }
+                catch (Exception e)
+                {
+                     log.Error("Fatal exception: cannot get service location", e);
+                }
+            }
 
-        public int GetNumberOfCredits()
-        {
-            return 0;
-        }
+            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+            ChannelFactory<IAccountRepository> cf2 = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(location));    
+	    ServiceRepo2 = cf2.CreateChannel();	    
 
-        public IEnumerable<Audit> AuditAll()
-        {
-            return null;
-        }
+	    return ServiceRepo2.GetAccountInformation(accountNumber);
+	}
 
-        public IEnumerable<Audit> GetAuditsByDate(DateTime date)
-        {
-            return null;
-        }
+	public IEnumerable<Audit> GetAllAuditsByAccount(string accountNumber)
+	{
+		Log("Service has started");
 
-        public IEnumerable<Audit> GetAuditsByAccount(String accountNumber)
-        {
-            return null;
-        }
+            if (!_test) 
+            {
+                Log("Registering to repository...");
+
+                //registering
+                NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+                ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(ConfigurationSettings.AppSettings["ServiceRepositoryAddress"]));
+                ServiceRepo = cf.CreateChannel();
+
+                try
+                {
+                    string location = ServiceRepo.GetServiceLocation("IAccountRepository");
+                }
+                catch (Exception e)
+                {
+                     log.Error("Fatal exception: cannot get service location", e);
+                }
+            }
+
+            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+            ChannelFactory<IAccountRepository> cf2 = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(location));    
+	    ServiceRepo2 = cf2.CreateChannel();	    
+
+	    return;
+	}
+
+	public IEnumerable<Audit> GetAllAudits()
+	{
+	    Log("Service has started");
+
+            if (!_test) 
+            {
+                Log("Registering to repository...");
+
+                //registering
+                NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+                ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(ConfigurationSettings.AppSettings["ServiceRepositoryAddress"]));
+                ServiceRepo = cf.CreateChannel();
+
+                try
+                {
+                    string location = ServiceRepo.GetServiceLocation("IAccountRepository");
+                }
+                catch (Exception e)
+                {
+                     log.Error("Fatal exception: cannot get service location", e);
+                }
+            }
+
+            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+            ChannelFactory<IAccountRepository> cf2 = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(location));    
+	    ServiceRepo2 = cf2.CreateChannel();	    
+
+	    return;
+	}
 
         public bool AddAudit(String accountNumber, long Money)
         {
