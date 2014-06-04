@@ -5,7 +5,7 @@
     <property name="dialect">NHibernate.Dialect.MySQL5Dialect</property>
     <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property>
     <property name="connection.connection_string">
-      Server=sql3.freemysqlhosting.net;Database=sql340632;User ID=sql340632;Password=eF5!jX5!;
+      Server=localhost;Database=auditor;User ID=auditor;Password=auditor;
     </property>
     <property name="use_proxy_validator">false</property>
   </session-factory>

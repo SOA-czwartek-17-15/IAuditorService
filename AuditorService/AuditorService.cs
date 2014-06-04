@@ -10,6 +10,7 @@ using System.Threading;
 using Contracts;
 using log4net;
 using NHibernate;
+using NHibernate.Criterion;
 
 
 namespace AuditorService
@@ -80,6 +81,14 @@ namespace AuditorService
             Log("Service has set the timer up");
 
             Log("Service is ready");
+
+            //auditor.setRepos(ServiceRepo);
+
+            //Log("Set repo for auditor service");
+            //auditor.AddAudit("666666", 666666);
+            //Audit audit = auditor.GetLastAuditByAccount("666666");
+
+            //Console.WriteLine(audit.Money);
 
             //at this point the service is ready
             //keypress closes the service
@@ -178,39 +187,50 @@ namespace AuditorService
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, IncludeExceptionDetailInFaults = true)]
     public class AuditorService : IAuditorService
     {
-        
-	public Audit GetLastAuditByAccount(string accountNumber)
-	{
-	Log("Service has started");
+        private static IServiceRepository ServiceRepo { get; set; }
+        private static IAccountRepository AccountRepo { get; set; }
 
-            if (!_test) 
+        public void setRepos(IServiceRepository serviceRepo)
+        {
+            ServiceRepo = serviceRepo;
+
+            string location = ServiceRepo.GetServiceLocation("IAccountService");
+
+
+
+            NetTcpBinding binding2 = new NetTcpBinding(SecurityMode.None);
+            ChannelFactory<IAccountRepository> cf2 = new ChannelFactory<IAccountRepository>(binding2, new EndpointAddress(location));
+            AccountRepo = cf2.CreateChannel();
+        }
+
+	    public Audit GetLastAuditByAccount(string accountNumber)
+        {
+            Log("Getting audit");
+            try
             {
-                Log("Registering to repository...");
-
-                //registering
-                NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-                ChannelFactory<IServiceRepository> cf = new ChannelFactory<IServiceRepository>(binding, new EndpointAddress(ConfigurationSettings.AppSettings["ServiceRepositoryAddress"]));
-                ServiceRepo = cf.CreateChannel();
-
-                try
+                using (ISession session = NHibernateHelper.OpenSession())
                 {
-                    string location = ServiceRepo.GetServiceLocation("IAccountRepository");
-                }
-                catch (Exception e)
-                {
-                     log.Error("Fatal exception: cannot get service location", e);
+                    using (ITransaction transaction = session.BeginTransaction())
+                    {
+                        var c = session.CreateCriteria<Audit>();
+                        c.Add(Expression.Eq("AccountNumber", accountNumber));
+                        Audit audit = c.UniqueResult<Audit>();
+                        Log("Got audit");
+                        return audit;
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                LogError(e.Message);
+                return null;
+            }
 
-            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-            ChannelFactory<IAccountRepository> cf2 = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(location));    
-	    ServiceRepo2 = cf2.CreateChannel();	    
-
-	    return ServiceRepo2.GetAccountInformation(accountNumber);
-	}
+            return null;
+	    }
 
 	public IEnumerable<Audit> GetAllAuditsByAccount(string accountNumber)
-	{
+	{/*
 		Log("Service has started");
 
             if (!_test) 
@@ -228,19 +248,19 @@ namespace AuditorService
                 }
                 catch (Exception e)
                 {
-                     log.Error("Fatal exception: cannot get service location", e);
+                     LogError("Fatal exception: cannot get service location");
                 }
             }
 
             NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
             ChannelFactory<IAccountRepository> cf2 = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(location));    
 	    ServiceRepo2 = cf2.CreateChannel();	    
-
-	    return;
+        */
+	    return null;
 	}
 
 	public IEnumerable<Audit> GetAllAudits()
-	{
+	{/*
 	    Log("Service has started");
 
             if (!_test) 
@@ -265,8 +285,8 @@ namespace AuditorService
             NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
             ChannelFactory<IAccountRepository> cf2 = new ChannelFactory<IAccountRepository>(binding, new EndpointAddress(location));    
 	    ServiceRepo2 = cf2.CreateChannel();	    
-
-	    return;
+        */
+	    return null;
 	}
 
         public bool AddAudit(String accountNumber, long Money)
@@ -300,11 +320,13 @@ namespace AuditorService
         private void Log(String log)
         {
             Logger.log.Info(log);
+            Console.WriteLine(log);
         }
 
         private void LogError(String log)
         {
             Logger.log.Error(log);
+            Console.WriteLine(log);
         }
     }
 
